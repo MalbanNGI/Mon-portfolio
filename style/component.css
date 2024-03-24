@@ -1,0 +1,356 @@
+/* ----*/
+/* Body */
+/* ----*/
+
+/* Header */
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+ul {
+    list-style: none; /* Supprime les puces de la liste */
+    text-align: center; /* Centre le texte */
+}
+
+.link_nav {
+    color: #000000; /* Couleur des liens */
+    text-transform: uppercase; /* Met le texte en majuscules */
+    text-decoration: none; /* Supprime la décoration des liens */
+    letter-spacing: 0.15em; /* Ajoute un espacement entre les lettres */
+}
+
+.link_nav:after {
+    background: none repeat scroll 0 0 transparent; /* Arrière-plan transparent */
+    background: #000000; /* Couleur de l'arrière-plan */
+    transition: width 0.7s ease 0s, left 0.7s ease 0s; /* Transition de largeur */
+    width: 0; /* Largeur initiale */
+}
+
+.title_intro {
+    font-size: 6rem; /* Taille de la police */
+    font-family: 'Cinzel Decorative', serif; /* Police de caractères */
+    transition: 2s; /* Durée de transition */
+    animation: changeColor 5s infinite alternate; /* Animation de changement de couleur */
+    /* Animation de 2 secondes, en alternance, en boucle */
+}
+
+/* main */
+
+@keyframes changeColor {
+    50% {
+        color: #333333; /* Couleur du texte à 50% de l'animation */
+        /* Milieu de l'animation : couleur bleue */
+    }
+
+    100% {
+        color: #0d3c6b; /* Couleur du texte à 100% de l'animation */
+        /* Fin de l'animation : couleur verte */
+    }
+}
+
+.paragraph_intro {
+    margin-top: -20pt; /* Marge supérieure négative */
+    font-size: 2rem; /* Taille de la police */
+    font-family: 'Bodoni Moda', serif; /* Police de caractères */
+    font-style: italic; /* Style de police italique */
+}
+
+.profil_pict img:hover {
+    transform: scale(1.2); /* Agrandit l'image au survol */
+    /* Agrandir l'image */
+}
+
+.profil_pict:hover::after {
+    opacity: 1; /* Opacité */
+}
+
+h2,
+.title_from_each_categories {
+    font-size: 3rem; /* Taille de la police */
+    text-align: center; /* Centre le texte */
+    font-family: 'Cinzel Decorative', serif; /* Police de caractères */
+}
+
+#title_from_contact {
+    color: #f5efe6; /* Couleur du texte */
+}
+
+.descriptionAllBio {
+    font-family: 'Montserrat', sans-serif; /* Police de caractères */
+    font-size: 1.2rem; /* Taille de la police */
+}
+
+.button_add_CV {
+    font-size: 1.2rem; /* Taille de la police */
+    font-family: 'Cinzel Decorative', serif; /* Police de caractères */
+    background-color: #922b77; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    border: none; /* Supprime la bordure */
+    transform: skewX(-5deg); /* Inclinaison */
+    transition: 2s; /* Durée de transition */
+}
+
+
+/* Au survol du bouton */
+.button_add_CV:hover {
+    transition: 1s; /* Durée de la transition */
+    background-color: #e65b16; /* Changement de couleur de fond */
+    box-shadow: 10px 10px 0 #922b77; /* Ombre portée */
+}
+
+/* Après le survol du bouton */
+.button_add_CV::after {
+    transition: 1s; /* Durée de la transition */
+    box-shadow: 10px 10px 0 #ffffff; /* Ombre portée */
+}
+
+/* PROJECT CARD */
+
+.project_card {
+    background-color: #314A60; /* Couleur de fond */
+    border: 5px solid #314A60; /* Bordure */
+    transition: height 0.2s ease, opacity 0.2s ease; /* Transition de hauteur et opacité */
+    border-radius: 10pt; /* Bordure arrondie */
+    color: #fff; /* Couleur du texte */
+    transition: 1s; /* Durée de transition */
+}
+
+.project_card:hover {
+    box-shadow: 10px 10px 0 #cd5c5c; /* Ombre portée au survol */
+    transition: 1s; /* Durée de transition */
+    cursor: grab; /* Curseur personnalisé */
+}
+
+.img_project:hover {
+    transform: scale(1.05); /* Agrandit l'image au survol */
+    transition: 1s; /* Durée de transition */
+}
+
+.title_from_each_project {
+    font-size: 2rem; /* Taille de la police */
+    text-align: center; /* Centre le texte */
+    font-family: 'Cinzel Decorative', serif; /* Police de caractères */
+    margin-left: 25pt; /* Marge à gauche */
+}
+
+.text_project {
+    font-family: 'Montserrat', serif; /* Police de caractères */
+    font-size: 1.2rem; /* Taille de la police */
+}
+
+.imgskills:hover {
+    transform: scale(1.4); /* Agrandit l'image au survol */
+}
+
+.img_project img {
+    border: 4pt solid #fff; /* Bordure autour de l'image */
+    border-radius: 10pt; /* Bordure arrondie */
+}
+
+.img_text1 {
+    overflow: hidden; /* Masque le contenu débordant */
+    transition: 1s; /* Durée de transition */
+}
+.img_text2 {
+    overflow: hidden; /* Masque le contenu débordant */
+    transition: 1s; /* Durée de transition */
+}
+
+.img_text3 {
+    overflow: hidden; /* Masque le contenu débordant */
+    transition: 1s; /* Durée de transition */
+}
+
+.img_text4 {
+    overflow: hidden; /* Masque le contenu débordant */
+    transition: 1s; /* Durée de transition */
+}
+
+.softskills {
+    font-family: 'Cinzel Decorative', serif; /* Police de caractères */
+    color: white; /* Couleur du texte */
+}
+
+/* Au survol de img_text1 */
+.img_text1:hover .descriptive_text {
+    opacity: 1; /* Opacité */
+    transition: 1s; /* Durée de transition */
+    background-color: #f5efe6; /* Couleur de fond */
+    color: #333; /* Couleur du texte */
+    text-align: center; /* Alignement du texte */
+}
+
+/* Au survol de img_text2 */
+.img_text2:hover .descriptive_text {
+    opacity: 1; /* Opacité */
+    transition: 1s; /* Durée de transition */
+    background-color: #f5efe6; /* Couleur de fond */
+    color: #333; /* Couleur du texte */
+    text-align: center; /* Alignement du texte */
+}
+
+/* Au survol de img_text3 */
+.img_text3:hover .descriptive_text {
+    opacity: 1; /* Opacité */
+    transition: 1s; /* Durée de transition */
+    background-color: #f5efe6; /* Couleur de fond */
+    color: #333; /* Couleur du texte */
+    text-align: center; /* Alignement du texte */
+}
+
+/* Au survol de img_text4 */
+.img_text4:hover .descriptive_text {
+    opacity: 1; /* Opacité */
+    transition: 1s; /* Durée de transition */
+    background-color: #f5efe6; /* Couleur de fond */
+    color: #333; /* Couleur du texte */
+    text-align: center; /* Alignement du texte */
+}
+
+.li_from_project {
+    list-style: none; /* Supprime les puces des listes */
+}
+
+.sub_title {
+    font-family: 'Montserrat', serif; /* Police de caractères */
+    
+    font-size: 2rem; /* Taille de la police */
+    color: #f5efe6; /* Couleur du texte */
+}
+
+/* Bouton de défilement */
+
+#scrollBtn {
+    transition: 1s; /* Durée de transition */
+    color: #333; /* Couleur du texte */
+    background-color: transparent; /* Couleur de fond transparente */
+    cursor: pointer; /* Curseur personnalisé */
+}
+
+#scrollBtn:hover {
+    background-color: #922b77; /* Couleur de fond au survol */
+    color: #fff; /* Couleur du texte au survol */
+    transition: 1s; /* Durée de transition */
+    box-shadow: 5px 5px 0 #e65b16; /* Ombre portée au survol */
+}
+
+.card:hover > .img {
+    height: 30%; /* Hauteur de l'image au survol */
+    filter: blur(7px); /* Effet de flou sur l'image au survol */
+    animation: anim 3s infinite; /* Animation de l'image au survol */
+    
+}
+.card:hover {
+    cursor: pointer;
+}
+
+
+@keyframes anim {
+    0% {
+        transform: translateY(0); /* Début de l'animation de translation en Y */
+    }
+    50% {
+        transform: translateY(-7px); /* Mi-chemin de l'animation de translation en Y */
+    }
+    100% {
+        transform: translateY(0); /* Fin de l'animation de translation en Y */
+    }
+}
+
+.card:hover {
+    transform: scale(1.1) rotate(-1deg); /* Transformation de mise à l'échelle et rotation au survol */
+    transition: 1s; /* Durée de transition */
+}
+
+.button {
+    --border-right: 6px; /* Définition d'une variable CSS */
+    --text-stroke-color: rgba(0, 0, 0, 0.6); /* Couleur du contour du texte */
+    --animation-color: #f5efe6; /* Couleur de l'animation */
+    letter-spacing: 3px; /* Espacement entre les lettres */
+    text-decoration: none; /* Pas de décoration de texte */
+    font-size: 2em; /* Taille de la police */
+    font-family: 'Cinzel Decorative', serif; /* Police de caractères */
+    position: relative; /* Position relative */
+    text-transform: uppercase; /* Texte en majuscules */
+    color: #f5efe6; /* Couleur du texte */
+}
+
+.hover-text {
+    position: absolute; /* Position absolue */
+    box-sizing: border-box; /* Boîte de modèle de bordure */
+    content: attr(data-text); /* Contenu textuel */
+    color: var(--animation-color); /* Couleur du texte */
+    width: 0%; /* Largeur de départ */
+    inset: 0; /* Position de départ */
+    overflow: hidden; /* Masque le contenu débordant */
+    transition: 0.5s; /* Durée de transition */
+    -webkit-text-stroke: 1px var(--animation-color); /* Contour du texte */
+}
+
+.slidemenu label,
+.slider .bar {
+    transition: all 500ms ease-in-out; /* Transition animée */
+    -webkit-transition: all 500ms ease-in-out; /* Transition animée pour les navigateurs WebKit */
+    -moz-transition: all 500ms ease-in-out; /* Transition animée pour les navigateurs Mozilla */
+}
+
+/* Basculer */
+
+.slidemenu .slide-toggle:hover + label {
+    opacity: 1; /* Opacité au survol */
+}
+
+a {
+    list-style: none; /* Supprime les puces des liens */
+    text-decoration: none; /* Pas de décoration de lien */
+    color: #f5efe6; /* Couleur du texte des liens */
+}
+
+#tracker {
+    width: 20px;
+    height: 20px;
+    background-color:#333;
+    border-color: #000000;
+    padding: 5px;
+    position: absolute;
+    border-radius: 50%;
+    transition: width 1s, height 1s;
+}
+
+#tracker.large {
+    width: 30px;
+    height: 30px;
+    transition: 1s;
+}
+
+
+body {
+    cursor: none;
+}
+
+/* Formulaire */
+
+.button-send,
+input {
+    font-family: 'Montserrat', sans-serif; /* Police de caractères */
+    font-weight: 700; /* Poids de la police */
+    letter-spacing: 1.4px; /* Espacement entre les lettres */
+}
+
+.app-form-control::placeholder {
+    color: #9c9797; /* Couleur du texte de l'attribut placeholder */
+}
+
+.app-form-control:focus {
+    border-bottom-color: #ddd; /* Couleur de la bordure inférieure du champ de saisie lorsqu'il est focus */
+}
+
+.app-form-control:hover {
+    border-bottom-color: #ddd; /* Couleur de la bordure inférieure du champ de saisie au survol */
+}
+
+/* bouton envoyer */
+
+
+
+

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/layout.css">
+    <link rel="stylesheet" href="style/component.css">
+    <title>Portfolio Milo Navellou</title>
+    <script src="anim.js" type="module"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="media/images/logomilo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lemon&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+</head>
+
+<body>
+    <div id="tracker"></div>
+    <audio id="myAudio" controls> <!-- Son au démarrage -->
+        <source src="media/audio/portfoliomusic.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="modal" id="myModal"> <!-- Page de démmarage -->
+        <div class="modal-content">
+            <h3 class="title-music">Voulez vous écouter ma musique ?</h3>
+            <p>Souhaitez-vous écouter des morceaux calmes que j'ai créés pendant votre navigation?</p>
+            <div class="musicBtn">
+                <button class="button-choose" id="yesBtn">Oui</button>
+                <button class="button-choose" id="noBtn">Non</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="section1"> <!-- Section 1 pour gérer les background-color -->
+
+        <header>
+            <nav>
+                <ul class="ul_header">
+                    <li class="li_header"><a class="link_nav" onclick="scrollToTop()" title="Qui suis-je ?"
+                            href="#ancre_quisuisje">Qui suis-je
+                            ?</a></li>
+                    <li class="li_header"><a class="link_nav" onclick="scrollToTop()" title="Mes projets"
+                            href="#ancre_projets">Mes projets</a></li>
+                    <li class="li_header"><a class="link_nav" onclick="scrollToTop()" title="Mes compétences"
+                            href="#ancre_skills">Mes
+                            compétences</a></li>
+                    <li class="li_header"><a class="link_nav" onclick="scrollToTop()" title="Me contacter"
+                            href="#ancre_conctact">Me contacter</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <button class="button-scroll" onclick="scrollToTop()" id="scrollBtn" title="Revenir en haut">
+            <img src="style/assets/arrow.png" alt="retour">
+        </button>
+
+        <script src="style/anim.js">
+        </script>
+
+        <section class="introduction"> <!-- message de bienvenue -->
+            <div class="text_intro">
+                <h1 class="title_intro"> Bonjour </h1>
+                <p class="paragraph_intro"> Je m'appelle Milo et j'ai 18 ans </p>
+            </div>
+            <div> <!-- Image -->
+                <img class="img_intro-Bird" src="media/images/oiseauxintro.png"
+                    alt="Image d'oiseaux batant des ailes comme si il allait s'envoler">
+            </div>
+        </section>
+
+        <div class="profil_pict"> <!-- Photo de profil -->
+            <img src="media/images/milo.JPG" alt="Photo de profil - Milo Navellou">
+        </div>
+
+        <div id="ancre_quisuisje"></div> <!-- Ancre pour accéder à "Qui suis-je ?" -->
+
+        <h2 class="title_from_each_categories"> Qui suis-je ? </h2>
+
+        <section id="container_whoIam"> <!-- "Qui suis-je ?" mini-bio, photo, etc... -->
+            <article class="descriptionAllBio">
+                <div class="text_and_buttonCV"> <!-- 1ère partie de ma bio plus lien pour télécharger monCV -->
+                    <div class="text_firstPart">
+                        <p>
+                            Bonjour, je m’appelle Milo Navellou, j’ai 18 ans et je suis
+                            étudiant en première année de BUT Métiers du
+                            multimédia et de l'internet à Lannion. J’ai obtenu mon
+                            baccalauréat général avec les spécialités NSI
+                            (Numérique et Sciences Informatiques), physique-
+                            chimie et mathématiques. Je suis perfectionniste et
+                            j’aime être satisfait du travail que je fais et que je rends,
+                            c’est pour ça qu’au cours des différents projets/travaux
+                            que j’ai réalisés au cours de ma scolarité, j’ai développé
+                            une certaine rigueur.
+                        </p>
+                    </div>
+                    
+                        <button class="button_add_CV">
+                            <a class="link_CV" title="Mon CV" href="media/fichiers/CV - Milo Navellou.pdf" target="_blank" download="CV - Milo Navellou.pdf">
+                            Mon CV
+                            </a>
+
+                        </button>
+
+                    
+                </div>
+                <div class="text_secondPart"> <!-- 2ème partie de ma bio -->
+                    <p>
+                        Mon objectif est de combiner esthétique et
+                        fonctionnalité pour créer des solutions web qui
+                        répondent aux besoins des utilisateurs. Aimant
+                        programmer et exprimer ma créativité à travers des
+                        vidéos et des photos, j’aimerai travailler dans un métier
+                        alliant programmation et audiovisuel. Faisant aussi de la
+                        musique, j’aime partager mes réalisations sur ma chaîne
+                        YouTube ainsi que sur les différentes plateformes de
+                        streaming. Mon parcours académique et mes intérêts
+                        convergent vers une carrière dans l'univers du
+                        multimédia et de la technologie.
+                    </p>
+                </div>
+                <div class="text_thirdPart"> <!-- 3ème partie de ma bio -->
+                    <p>
+                        De plus, allant en Espagne tous les étés depuis 18 ans j’ai
+                        un très bon niveau de compréhension et un bon niveau
+                        à l’oral. Je peux aussi participer à des discussions sans
+                        être trop gêné en anglais.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <div id="ancre_projets"></div> <!-- Ancre pour accéder à "Qui suis-je ?" -->
+
+        <h2 class="title_from_each_categories"> Mes projets </h2>
+
+        <section id="container_projects"> <!-- "Mes projets" -->
+            <article class="project_card" onclick="toggleProjectDetails(this)">
+                <div class="open-close"> <!-- Flèche pour montrer qu'il faut déplier la carte -->
+                    <img src="style/assets/arrow.png" alt="open-close">
+                </div>
+                <h3 class="title_from_each_project"> Produire un site Web </h3>
+                <div class="project-details ">
+                    <div class="img_project"> <!-- Image de mon projet -->
+                        <img src="media/images/pokemonsite.png" alt="img_project">
+                    </div>
+                    <div class="project_description"> <!-- Description du projet : texte  -->
+                        <p class="text_project">
+                            J'ai réalisé un premier site internet basique, sans base de données. Le site comporte
+                            quelques
+                            pages seulement avec un accent particulier sur la partie design.
+
+                        </p>
+                        <span>A la fin de ce projet, j'ai su :</span>
+                        <ul class="ul_from_project">
+                            <li class="li_from_project">Réaliser un petit site internet</li>
+                            <li class="li_from_project">Réaliser une maquette de page web</li>
+                            <li class="li_from_project">Intégrer une maquette en page web</li>
+                            <li class="li_from_project">Manipuler des données stockées sous forme d'un fichier</li>
+                            <li class="li_from_project">Mettre en ligne mon site</li>
+                        </ul>
+                    </div>
+                    <div class="project_skills"> <!-- Description du projet : hardskills & softskills  -->
+                        <div class="hardskills">
+                            <div class="img_text1">
+                                <img class="imgskills" src="style/assets/logo_json.svg" alt="logoHardSkills">
+                                <div class="descriptive_text">
+                                    Json
+                                </div>
+                            </div>
+                            <div class="img_text2">
+                                <img class="imgskills" src="style/assets/logo_javascript.svg" alt="logoHardSkills">
+                                <div class="descriptive_text">
+                                    Javascript
+                                </div>
+                            </div>
+                            <div class="img_text3">
+                                <img class="imgskills" src="style/assets/log_css.svg" alt="logoHardSkills">
+                                <div class="descriptive_text">
+                                    Css
+                                </div>
+                            </div>
+                            <div class="img_text4">
+                                <img class="imgskills" src="style/assets/logo_html.svg" alt="logoHardSkills">
+                                <div class="descriptive_text">
+                                    Html
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="softskills">
+                            <div class="one">Travail d'équipe</div>
+                            <div class="two">Organisation</div>
+                            <div class="three">L'écoute</div>
+                            <div class="four">Imagination</div>
+                            <div class="five">Efficacité</div>
+                            <div class="six">Réflexion</div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project_card" onclick="toggleProjectDetails(this)"> <!-- Idem -->
+                <div class="open-close">
+                    <img src="style/assets/arrow.png" alt="open-close">
+                </div>
+                <h3 class="title_from_each_project"> Produire un contenu audio et video </h3>
+                <div class="project-details ">
+                    <div class="img_project">
+                        <img src="media/images/film.png" alt="img_project">
+                    </div>
+                    <div class="project_description">
+                        <p class="text_project">
+                            Mes camarades et moi même avons réalisé un court-métrage muet d'1 minute sur l'histoire d'un
+                            employé de bureau dont la vie va basculer subitement
+                        </p>
+                        <span>A la fin de ce projet, j'ai su :</span>
+                        <ul class="ul_from_project">
+                            <li class="li_from_project">Manipuler une caméra</li>
+                            <li class="li_from_project">Manipuler différents micros</li>
+                            <li class="li_from_project">Rédiger un storyboard, synopsis...</li>
+                            <li class="li_from_project">Monter un film sur DaVinci</li>
+                            <li class="li_from_project">Mixer un film (voix, ambiances)</li>
+                            <li class="li_from_project">Etalloner des plans</li>
+                        </ul>
+                    </div>
+                    <div class="project_skills">
+                        <div class="hardskills">
+                            <div class="img_text1">
+                                <img class="imgskills" src="style/assets/logo_davinci.png" alt="logoHardSkills">
+                                <div class="descriptive_text">
+                                    DaVinci
+                                </div>
+                            </div>
+                            <div class="img_text2">
+                                <img class="imgskills" src="style/assets/logo_camera.svg" alt="logoHardSkills">
+                                <div class="descriptive_text">
+                                    Canon 90D
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="middle"></div>
+                        <div class="softskills">
+                            <div class="one">Travail d'équipe</div>
+                            <div class="two">Organisation</div>
+                            <div class="three">L'écoute</div>
+                            <div class="four">Imagination</div>
+                            <div class="five">Efficacité</div>
+                            <div class="six">Réflexion</div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project_card" onclick="toggleProjectDetails(this)"> <!-- Idem -->
+                <div class="open-close">
+                    <img src="style/assets/arrow.png" alt="open-close">
+                </div>
+                <h3 class="title_from_each_project"> Produire un mini jeux vidéo </h3>
+                <div class="project-details ">
+                    <div class="img_project">
+                        <img src="media/images/film.png" alt="img_project">
+                    </div>
+                    <div class="project_description">
+                        <p class="text_project">
+                            En terminal NSI, avec un camarade, nous avions pour missions de créer le jeu de nim dans le
+                            terminal Linux.
+                            Pour cela, nous avons du créer différentes class Python et faire en sorte que le serveur
+                            vérifie les coups des joueurs.
+                        </p>
+                        <span>A la fin de ce projet, j'ai su :</span>
+                        <ul class="ul_from_project">
+                            <li class="li_from_project">Manipuler une caméra</li>
+                            <li class="li_from_project">Manipuler différents micros</li>
+                            <li class="li_from_project">Rédiger un storyboard, synopsis...</li>
+                            <li class="li_from_project">Monter un film sur DaVinci</li>
+                            <li class="li_from_project">Mixer un film (voix, ambiances)</li>
+                            <li class="li_from_project">Etalloner des plans</li>
+                        </ul>
+                    </div>
+                    <div class="project_skills">
+                        <div class="hardskills">
+                            <div class="img_text1">
+                                <img class="imgskills" src="style/assets/logo_json.svg" alt="logoHardSkills">
+                                <div class="descriptive_text">
+                                    Json
+                                </div>
+                            </div>
+                            <div class="img_text2">
+                                <img class="imgskills" src="style/assets/Python-logo-notext.svg.png"
+                                    alt="logoHardSkills">
+                                <div class="descriptive_text">
+                                    Python
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="middle"></div>
+                        <div class="softskills">
+                            <div class="one">Travail d'équipe</div>
+                            <div class="two">Organisation</div>
+                            <div class="three">L'écoute</div>
+                            <div class="four">Imagination</div>
+                            <div class="five">Efficacité</div>
+                            <div class="six">Réflexion</div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+
+    <div class="section" id="section2"> <!-- Début de la section 2 pour les background -->
+
+        <div id="ancre_skills"></div> <!-- Ancre pour mes compétences -->
+
+        <h2 class="title_from_each_categories"> Mes compétences </h2>
+
+        <h4 class="sub_title"> Logiciels / Outils maîtrisés </h4>
+
+        <section class="software"> <!-- Liste des logiciels que je maîtrise #1 -->
+            <div class="card">
+                <img class="img" src="style/assets/log_css.svg" alt="logo">
+
+                <div class="textBox">
+                    <p class="text head">CSS</p>
+                    <span>50h</span>
+                    <p class="text price">Développement Web</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="img" src="style/assets/logo_davinci.png" alt="logo">
+
+                <div class="textBox">
+                    <p class="text head">DaVinci Résolve</p>
+                    <span>30h</span>
+                    <p class="text price">Montage vidéo</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="img" src="style/assets/logo_html.svg" alt="logo">
+
+                <div class="textBox">
+                    <p class="text head">Html 5</p>
+                    <span>50h</span>
+                    <p class="text price">Développement Web</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="img" src="style/assets/logo_javascript.svg" alt="logo">
+
+                <div class="textBox">
+                    <p class="text head">Javascript</p>
+                    <span>20h</span>
+                    <p class="text price">Développement Web</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="img" src="style/assets/logo_affinity_photo.png" alt="logo">
+
+                <div class="textBox">
+                    <p class="text head">Affinity Bundle</p>
+                    <span>50h</span>
+                    <p class="text price">Design</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="software"> <!-- Liste des logiciels que je maîtrise #2 -->
+            <div class="card">
+                <img class="img" src="style/assets/logo_json.svg" alt="logo">
+
+                <div class="textBox">
+                    <p class="text head">Json</p>
+                    <span>10h</span>
+                    <p class="text price">Développement Web</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="img" src="style/assets/logo_vscode.svg" alt="logo">
+
+                <div class="textBox">
+                    <p class="text head">Vs Code</p>
+                    <span>200h</span>
+                    <p class="text price">Développement Web</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="img" src="style/assets/logo_php.png" alt="logo">
+
+                <div class="textBox">
+                    <p class="text head">PHP</p>
+                    <span>20h</span>
+                    <p class="text price">Développement Web</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="img" src="style/assets/Python-logo-notext.svg.png" alt="logo">
+
+                <div class="textBox">
+                    <p class="text head">Python</p>
+                    <span>150h</span>
+                    <p class="text price">Développement Web</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="img" src="style/assets/logo_flstudio.png" alt="logo">
+
+                <div class="textBox">
+                    <p class="text head">Fruity Loops 21</p>
+                    <span>4000h</span>
+                    <p class="text price">Création musicale</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <h4 class="sub_title"> Mes qualités </h4>
+
+    <section class="section_of_softskills"> <!-- Liste de mes principales qualités -->
+        <div class="soft_skills">
+            <button class="button" data-text="Awesome">
+                <span class="actual-text">&nbsp;Autonome&nbsp;</span>
+                <span aria-hidden="true" class="hover-text">&nbsp;Autonome&nbsp;</span>
+            </button>
+            <button class="button" data-text="Awesome">
+                <span class="actual-text">&nbsp;créatif&nbsp;</span>
+                <span aria-hidden="true" class="hover-text">&nbsp;créatif&nbsp;</span>
+            </button>
+            <button class="button" data-text="Awesome">
+                <span class="actual-text">&nbsp;curieux&nbsp;</span>
+                <span aria-hidden="true" class="hover-text">&nbsp;Curieux&nbsp;</span>
+            </button>
+            <button class="button" data-text="Awesome">
+                <span class="actual-text">&nbsp;travailleur&nbsp;</span>
+                <span aria-hidden="true" class="hover-text">&nbsp;travailleur&nbsp;</span>
+            </button>
+            <button class="button" data-text="Awesome">
+                <span class="actual-text">&nbsp;rigoureux&nbsp;</span>
+                <span aria-hidden="true" class="hover-text">&nbsp;rigoureux&nbsp;</span>
+            </button>
+        </div>
+        <div class="soft_skills">
+            <button class="button" data-text="Awesome">
+                <span class="actual-text">&nbsp;honnête&nbsp;</span>
+                <span aria-hidden="true" class="hover-text">&nbsp;honnête&nbsp;</span>
+            </button>
+            <button class="button" data-text="Awesome">
+                <span class="actual-text">&nbsp;organisé&nbsp;</span>
+                <span aria-hidden="true" class="hover-text">&nbsp;organisé&nbsp;</span>
+            </button>
+            <button class="button" data-text="Awesome">
+                <span class="actual-text">&nbsp;Ouvert d’esprit&nbsp;</span>
+                <span aria-hidden="true" class="hover-text">&nbsp;Ouvert d’esprit&nbsp;</span>
+            </button>
+            <button class="button" data-text="Awesome">
+                <span class="actual-text">&nbsp;passionné&nbsp;</span>
+                <span aria-hidden="true" class="hover-text">&nbsp;passionné&nbsp;</span>
+            </button>
+            <button class="button" data-text="Awesome">
+                <span class="actual-text">&nbsp;Bienveillant&nbsp;</span>
+                <span aria-hidden="true" class="hover-text">&nbsp;Bienveillant&nbsp;</span>
+            </button>
+        </div>
+    </section>
+
+    
+
+    <footer id="footer">
+
+        <div id="ancre_conctact"></div> <!-- Ancre pour mes contacts -->
+
+        <h2 id="title_from_contact"> Mes contacts </h2>
+
+        <nav class="slidemenu"> <!-- Menu contacts -->
+            <input type="radio" name="slideItem" id="slide-item-1" class="slide-toggle" checked >
+            <label for="slide-item-1"><a href="https://www.instagram.com/milo_navellou/" target="_blank"><img
+                        class="icon" src="style/assets/logo_insta.svg" alt="insta"><span>Instagram</span></a></label>
+
+            <input type="radio" name="slideItem" id="slide-item-2" class="slide-toggle" >
+            <label for="slide-item-2"><a href="https://github.com/MalbanNGI" target="_blank"><img class="icon"
+                        src="style/assets/logo_github.svg" alt="insta"><span>GitHub</span></a></label>
+
+            <input type="radio" name="slideItem" id="slide-item-3" class="slide-toggle" >
+            <label for="slide-item-3"><a href="#" target="_blank"><img class="icon" src="style/assets/logo_mail.svg"
+                        alt="insta"><span>YouTube</span></a></label>
+
+            <input type="radio" name="slideItem" id="slide-item-4" class="slide-toggle" >
+            <label for="slide-item-4"><a href="https://www.linkedin.com/in/milo-navellou-b72ab42b1/"
+                    target="_blank"><img class="icon" src="style/assets/logo_linkedin.svg"
+                        alt="insta"><span>Linkedin</span></a></label>
+
+            <div class="clear"></div>
+
+            <div class="slider">
+                <div class="bar"></div>
+            </div>
+        </nav>
+
+        <div class="background">
+            <!-- Formulaire pour me contacter par mail -->
+            <div class="container">
+                <div class="screen">
+                    <div class="screen-body">
+                        <div class="screen-body-item left">
+                            <div class="app-title">
+                                <span><strong>CONTACTEZ</strong></span>
+                                <span><strong>MOI</strong></span>
+                            </div>
+                            <img src="media/images/birds3.png" alt="bird2">
+                            <div class="app-contact">CONTACT INFO : +33 7 67 57 22 04</div>
+                        </div>
+                        <div class="screen-body-item">
+                            <div class="app-form">
+                                <form action="/votre-url-de-traitement" method="POST">
+                                    <div class="app-form-group">
+                                        <input class="app-form-control" type="text" name="name" placeholder="Nom">
+                                    </div>
+                                    <div class="app-form-group">
+                                        <input class="app-form-control" type="email" name="email" placeholder="Email">
+                                    </div>
+                                    <div class="app-form-group message">
+                                        <textarea class="app-form-control" name="message" placeholder="Message"></textarea>
+                                    </div>
+                                    <button class="button-send" type="submit">
+                                        <div class="svg-wrapper-1">
+                                            <div class="svg-wrapper">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                                    <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="sendmess">
+                                            Envoyer
+                                        </div>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+</body>
+
+</html>
