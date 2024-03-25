@@ -306,27 +306,8 @@ a {
     color: #f5efe6; /* Couleur du texte des liens */
 }
 
-#tracker {
-    width: 20px;
-    height: 20px;
-    background-color:#333;
-    border-color: #000000;
-    padding: 5px;
-    position: absolute;
-    border-radius: 50%;
-    transition: width 1s, height 1s;
-}
-
-#tracker.large {
-    width: 30px;
-    height: 30px;
-    transition: 1s;
-}
 
 
-body {
-    cursor: none;
-}
 
 /* Formulaire */
 
@@ -349,8 +330,38 @@ input {
     border-bottom-color: #ddd; /* Couleur de la bordure inférieure du champ de saisie au survol */
 }
 
-/* bouton envoyer */
+/* respo */
 
+@media screen and (max-width: 1024px) {
+    .link_nav {
+        padding: 10px 15px; /* Réduire le rembourrage des liens de navigation */
+    }
+}
 
+/* Petite taille d'écran (smartphone) */
+@media screen and (max-width: 768px) {
+    .profil_pict {
+        margin-top: 50px; /* Ajustez la marge supérieure */
+    }
+    .profil_pict img {
+        width: 70%; /* Ajustez la largeur de l'image */
+    }
+    .title_intro {
+        font-size: 4rem; /* Réduisez la taille de la police */
+    }
+    .paragraph_intro {
+        font-size: 1.5rem; /* Réduisez la taille de la police */
+    }
+}
+
+/* Très petite taille d'écran (smartphone en mode portrait) */
+@media screen and (max-width: 480px) {
+    .title_intro {
+        font-size: 3rem; /* Réduisez encore la taille de la police */
+    }
+    .paragraph_intro {
+        font-size: 1.2rem; /* Réduisez encore la taille de la police */
+    }
+}
 
 
