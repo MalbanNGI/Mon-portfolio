@@ -963,3 +963,53 @@ svg {
         transform: translateY(-0.1em);
     }
 }
+
+/* Ajoutez ce bloc à la fin de votre fichier CSS pour les Media Queries */
+
+/* Tablettes et smartphones en orientation portrait */
+@media screen and (max-width: 768px) {
+    .profil_pict {
+        margin-top: 50pt; /* Réduisez la marge supérieure */
+    }
+    .profil_pict img {
+        width: 50%; /* Ajustez la largeur de l'image */
+    }
+    .text_firstPart {
+        max-width: 100%; /* Utilisez toute la largeur disponible */
+    }
+    .text_secondPart {
+        margin-left: 0; /* Réinitialisez la marge */
+    }
+    .button_add_CV {
+        margin-left: 10%; /* Ajustez la marge */
+    }
+}
+
+/* Smartphones en orientation paysage */
+@media screen and (max-width: 576px) {
+    ul {
+        width: 100%; /* Utilisez toute la largeur disponible pour la liste */
+    }
+    .link_nav {
+        padding: 10px 15px; /* Réduisez les rembourrages */
+    }
+    .button_add_CV {
+        width: 120pt; /* Ajustez la largeur du bouton */
+        margin-left: 5%; /* Ajustez la marge */
+        margin-top: 35pt; /* Ajustez la marge supérieure */
+    }
+    .screen-body-item img {
+        margin-left: 0; /* Réinitialisez la marge */
+    }
+}
+
+/* Smartphones en orientation portrait */
+@media screen and (max-width: 420px) {
+    .text_intro {
+        font-size: 16px; /* Réduisez la taille de la police */
+    }
+    .screen-body-item img {
+        width: 100%; /* Utilisez toute la largeur disponible pour l'image */
+        margin-bottom: 15px; /* Ajoutez un espacement inférieur */
+    }
+}
