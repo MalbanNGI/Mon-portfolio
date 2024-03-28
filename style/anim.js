@@ -129,3 +129,49 @@ yesBtn.onclick = function() {
   sound.play();
 }
 
+// Sélectionner l'élément audio
+const audio = document.getElementById('myAudio');
+
+// Fonction pour arrêter la musique
+function stopMusic() {
+    audio.pause(); // Pause la musique
+    audio.currentTime = 0; // Remet le temps de lecture au début
+}
+
+// Fonction pour changer de musique
+function changeMusic(direction) {
+    stopMusic(); // Arrête la musique actuelle
+    
+    // Remplacer les URLs des musiques par les vôtres
+    const musicUrls = [
+        'media/audio/polaroit vraiment.mp3',
+        'media/audio/lydsten.mp3',
+        'media/audio/portfoliomusic.mp3'
+    ];
+
+    // Calculer le nouvel indice de la musique
+    let newIndex = audio.dataset.index ? parseInt(audio.dataset.index) + direction : 0;
+    newIndex = (newIndex + musicUrls.length) % musicUrls.length;
+
+    // Mettre à jour l'URL de la musique et jouer
+    audio.src = musicUrls[newIndex];
+    audio.dataset.index = newIndex;
+    audio.play();
+}
+
+// Écouteur d'événement pour les touches du clavier
+document.addEventListener('keydown', function(event) {
+    switch (event.code) {
+        case 'ArrowLeft':
+            changeMusic(-1); // Changer de musique vers la précédente
+            break;
+        case 'ArrowRight':
+            changeMusic(1); // Changer de musique vers la suivante
+            break;
+        case 'Backquote':
+            stopMusic(); // Arrêter la musique si la touche "²" est pressée
+            break;
+        default:
+            break;
+    }
+});
